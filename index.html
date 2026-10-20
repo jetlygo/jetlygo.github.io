@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Southeast Asia Travel Guides: Vietnam, Thailand, Bali, Cambodia | JetlyGo</title>
 <meta name="description" content="Free, honest travel guides to Vietnam, Thailand, Indonesia and Cambodia: where to go, the best months, route ideas and the tours worth booking. In 13 languages.">
+<link rel="icon" href="https://jetlygo.github.io/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="https://jetlygo.github.io/icon-192.png">
+<link rel="apple-touch-icon" href="https://jetlygo.github.io/apple-touch-icon.png">
 <link rel="canonical" href="https://jetlygo.github.io/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
@@ -21,7 +24,7 @@
 <link rel="preload" as="image" href="https://img.jetlygo.com/destination-images/ha-long-bay/c0-1400.webp">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Organization","@id":"https://jetlygo.com/#org","name":"JetlyGo","url":"https://jetlygo.com/","logo":"https://jetlygo.com/images/og/og-image.jpg","sameAs":["https://github.com/jetlygo","https://twitter.com/JetlyGoTravel"]},
+{"@type":"Organization","@id":"https://jetlygo.com/#org","name":"JetlyGo","url":"https://jetlygo.com/","logo":"https://jetlygo.github.io/icon-512.png","sameAs":["https://github.com/jetlygo","https://twitter.com/JetlyGoTravel"]},
 {"@type":"WebSite","@id":"https://jetlygo.github.io/#site","url":"https://jetlygo.github.io/","name":"JetlyGo Travel Guides","publisher":{"@id":"https://jetlygo.com/#org"},"inLanguage":"en"},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"What is the best month to visit Southeast Asia?","acceptedAnswer":{"@type":"Answer","text":"November to February suits most of the region: Thailand, Cambodia, northern and southern Vietnam are dry and cooler. Bali and Komodo are best from April to October, and central Vietnam from February to August, so a trip that covers several countries is usually planned around the weather."}},
@@ -35,17 +38,17 @@
 <style>
 :root{
   --bg:#fbfaf7;--surface:#ffffff;--ink:#1d2421;--muted:#5b6662;--line:#e6e2da;
-  --accent:#0f6b4f;--accent-ink:#ffffff;--accent-soft:#e3f1ea;--sand:#f3ede2;
+  --accent:#550b55;--accent-ink:#ffffff;--accent-soft:#f3e6f3;--sand:#f3ede2;
   --radius:16px;--shadow:0 1px 2px rgba(20,30,25,.06),0 8px 24px rgba(20,30,25,.06);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#111614;--surface:#18201d;--ink:#e8ece9;--muted:#a3ada8;--line:#2a3430;
-  --accent:#5fd3a5;--accent-ink:#0b1310;--accent-soft:#1d2e27;--sand:#1c2420;
+  --accent:#e2a8e2;--accent-ink:#1a0a1a;--accent-soft:#2c1a2c;--sand:#1c2420;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
 }}
 :root[data-theme="dark"]{
   --bg:#111614;--surface:#18201d;--ink:#e8ece9;--muted:#a3ada8;--line:#2a3430;
-  --accent:#5fd3a5;--accent-ink:#0b1310;--accent-soft:#1d2e27;--sand:#1c2420;
+  --accent:#e2a8e2;--accent-ink:#1a0a1a;--accent-soft:#2c1a2c;--sand:#1c2420;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -64,7 +67,8 @@ section{padding:64px 0}
 /* nav */
 .nav{position:absolute;top:0;left:0;right:0;z-index:2}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{color:#fff;font-weight:600;text-decoration:none;font-size:1.05rem}
+.brand{color:#fff;font-weight:600;text-decoration:none;font-size:1.05rem;display:inline-flex;align-items:center;gap:10px}
+.brand-mark{width:32px;height:32px;border-radius:50%;background:#fff;padding:3px}
 .nav a.pill{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.5);padding:8px 14px;border-radius:999px;font-size:.9rem;min-height:44px;display:inline-flex;align-items:center}
 
 /* hero */
@@ -152,12 +156,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <img src="https://img.jetlygo.com/destination-images/ha-long-bay/c0-1400.webp" alt="Sunset over the limestone islands of Ha Long Bay in Vietnam, with a cruise boat on the water" width="1400" height="933" fetchpriority="high">
   <nav class="nav" aria-label="Main">
     <div class="wrap">
-      <a class="brand" href="https://jetlygo.com/">JetlyGo</a>
+      <a class="brand" href="https://jetlygo.com/"><img src="https://jetlygo.github.io/icon-192.png" alt="" width="32" height="32" class="brand-mark">JetlyGo</a>
       <a class="pill" href="https://jetlygo.com/tours">Browse tours</a>
     </div>
   </nav>
   <div class="wrap">
-    <p class="eyebrow" style="color:#bff0d9">Free travel guides</p>
+    <p class="eyebrow" style="color:#f3d6f3">Free travel guides</p>
     <h1>Plan Southeast Asia without the guesswork</h1>
     <p>Where to go, when to go, and which tours are actually worth your money in Vietnam, Thailand, Indonesia and Cambodia. Written by people who have done these trips, not stitched together from brochures.</p>
     <div class="btns">
