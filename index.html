@@ -20,7 +20,7 @@
 <meta name="twitter:site" content="@JetlyGoTravel">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="https://img.jetlygo.com/destination-images/ha-long-bay/c0-1400.webp">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -37,25 +37,25 @@
 </script>
 <style>
 :root{
-  --bg:#fbfaf7;--surface:#ffffff;--ink:#1d2421;--muted:#5b6662;--line:#e6e2da;
-  --accent:#550b55;--accent-ink:#ffffff;--accent-soft:#f3e6f3;--sand:#f3ede2;
+  --bg:#f7f3ec;--surface:#ffffff;--ink:#14232e;--muted:#55636d;--line:#e3dccf;
+  --accent:#0b5c7a;--accent-ink:#ffffff;--accent-soft:#e1eef3;--sand:#efe6d6;--nav:#0e2a3b;--warm:#d98b3a;
   --radius:16px;--shadow:0 1px 2px rgba(20,30,25,.06),0 8px 24px rgba(20,30,25,.06);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#111614;--surface:#18201d;--ink:#e8ece9;--muted:#a3ada8;--line:#2a3430;
-  --accent:#e2a8e2;--accent-ink:#1a0a1a;--accent-soft:#2c1a2c;--sand:#1c2420;
+  --bg:#0c1820;--surface:#122431;--ink:#e6edf1;--muted:#9fb0bb;--line:#22394a;
+  --accent:#7cc4dc;--accent-ink:#0c1820;--accent-soft:#16303f;--sand:#10222d;--nav:#081923;--warm:#e8a35a;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
 }}
 :root[data-theme="dark"]{
-  --bg:#111614;--surface:#18201d;--ink:#e8ece9;--muted:#a3ada8;--line:#2a3430;
-  --accent:#e2a8e2;--accent-ink:#1a0a1a;--accent-soft:#2c1a2c;--sand:#1c2420;
+  --bg:#0c1820;--surface:#122431;--ink:#e6edf1;--muted:#9fb0bb;--line:#22394a;
+  --accent:#7cc4dc;--accent-ink:#0c1820;--accent-soft:#16303f;--sand:#10222d;--nav:#081923;--warm:#e8a35a;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.65 "Work Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 img{max-width:100%;display:block}
 a{color:var(--accent);text-underline-offset:3px}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;letter-spacing:-.01em;margin:0}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;line-height:1.15;letter-spacing:-.01em;margin:0}
 h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin-bottom:.6rem}
 h3{font-size:1.3rem}
 .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
@@ -65,17 +65,22 @@ section{padding:64px 0}
 .lede{font-size:1.1rem;color:var(--muted);max-width:680px}
 
 /* nav */
-.nav{position:absolute;top:0;left:0;right:0;z-index:2}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{color:#fff;font-weight:600;text-decoration:none;font-size:1.05rem;display:inline-flex;align-items:center;gap:10px}
-.brand-mark{width:32px;height:32px;border-radius:50%;background:#fff;padding:3px}
-.nav a.pill{color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.5);padding:8px 14px;border-radius:999px;font-size:.9rem;min-height:44px;display:inline-flex;align-items:center}
+.nav{position:sticky;top:0;z-index:10;background:var(--nav);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.brand{color:#fff;font-weight:600;text-decoration:none;font-size:1rem;display:inline-flex;align-items:center;gap:10px;white-space:nowrap;min-height:44px}
+.brand-mark{width:26px;height:26px}
+.brand span{color:#efe6d6;font-weight:400}
+.nav-links{display:flex;gap:22px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.95rem;display:inline-flex;align-items:center;min-height:44px}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--warm);color:#14232e;text-decoration:none;font-weight:600;font-size:.92rem;padding:0 16px;border-radius:8px;min-height:40px;display:inline-flex;align-items:center;white-space:nowrap}
+@media (max-width:860px){.nav-links{display:none}.nav-cta{margin-left:auto}}
 
 /* hero */
 .hero{position:relative;min-height:560px;display:flex;align-items:flex-end;color:#fff;background:#2a1a0e}
 .hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.15) 40%,rgba(0,0,0,.7) 100%)}
-.hero .wrap{position:relative;z-index:1;padding-bottom:56px;padding-top:96px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,42,59,.35) 0%,rgba(14,42,59,.15) 40%,rgba(10,30,42,.78) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:56px;padding-top:72px}
 .hero h1{font-size:clamp(2.2rem,5.5vw,3.8rem);max-width:820px}
 .hero p{font-size:1.15rem;max-width:620px;margin:16px 0 28px;color:rgba(255,255,255,.92)}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
@@ -88,7 +93,7 @@ section{padding:64px 0}
 .facts{background:var(--surface);border-bottom:1px solid var(--line)}
 .facts ul{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .facts li{font-size:.95rem;color:var(--muted)}
-.facts strong{display:block;font-family:Fraunces,Georgia,serif;font-size:1.5rem;color:var(--ink)}
+.facts strong{display:block;font-family:"DM Serif Display",Georgia,serif;font-size:1.5rem;color:var(--ink)}
 
 /* cards */
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
@@ -152,16 +157,23 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 </head>
 <body>
 
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="https://jetlygo.github.io/"><img src="https://jetlygo.github.io/mark-white.png" alt="" width="26" height="26" class="brand-mark">JetlyGo <span>Travel Guides</span></a>
+    <ul class="nav-links">
+      <li><a href="https://jetlygo.github.io/southeast-asia-travel-guide/vietnam-tours.html">Vietnam</a></li>
+      <li><a href="https://jetlygo.github.io/southeast-asia-travel-guide/thailand-tours.html">Thailand</a></li>
+      <li><a href="https://jetlygo.github.io/southeast-asia-travel-guide/indonesia-tours.html">Indonesia</a></li>
+      <li><a href="https://jetlygo.github.io/southeast-asia-travel-guide/cambodia-tours.html">Cambodia</a></li>
+    </ul>
+    <a class="nav-cta" href="https://jetlygo.com/tours">Browse tours</a>
+  </div>
+</nav>
+
 <header class="hero">
   <img src="https://img.jetlygo.com/destination-images/ha-long-bay/c0-1400.webp" alt="Sunset over the limestone islands of Ha Long Bay in Vietnam, with a cruise boat on the water" width="1400" height="933" fetchpriority="high">
-  <nav class="nav" aria-label="Main">
-    <div class="wrap">
-      <a class="brand" href="https://jetlygo.com/"><img src="https://jetlygo.github.io/icon-192.png" alt="" width="32" height="32" class="brand-mark">JetlyGo</a>
-      <a class="pill" href="https://jetlygo.com/tours">Browse tours</a>
-    </div>
-  </nav>
   <div class="wrap">
-    <p class="eyebrow" style="color:#f3d6f3">Free travel guides</p>
+    <p class="eyebrow" style="color:#efd9b4">Free travel guides</p>
     <h1>Plan Southeast Asia without the guesswork</h1>
     <p>Where to go, when to go, and which tours are actually worth your money in Vietnam, Thailand, Indonesia and Cambodia. Written by people who have done these trips, not stitched together from brochures.</p>
     <div class="btns">
